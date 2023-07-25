@@ -11,11 +11,15 @@ async function ping(evt) {
 
   try {
     // Construct the name prefix <user-input>+/ping
-    const prefix = new Name(document.querySelector("#app_prefix").value);
+    const prefix = new Name("/data/inputdata");
     const nama = document.querySelector("#app_nama").value;
     const umur = document.querySelector("#app_umur").value;
     const sex = document.querySelector("#app_sex").value;
     const penyakit = document.querySelector("#app_penyakit").value;
+    const alamat = document.querySelector("#app_alamat").value;
+    const hp = document.querySelector("#app_hp").value;
+    const ktp = document.querySelector("#app_ktp").value;
+    const goldar = document.querySelector("#app_goldar").value;
     //const $log = document.querySelector("#app_log");
     //$log.textContent = `Check Data \n${AltUri.ofName(prefix)}\n`;
 
@@ -31,16 +35,19 @@ async function ping(evt) {
       interest.mustBeFresh = true; 
       interest.lifetime = 1000;
       const dataObj = {
-        prefix: prefix,
         nama: nama,
         umur: umur,
+        alamat: alamat,
+        hp: hp,
+        ktp: ktp,
+        goldar: goldar,
         sex: sex,
         penyakit: penyakit
       };
       const jsonString = JSON.stringify(dataObj);
       // Use TextEncoder to encode the JSON string into Uint8Array
-      const textEncoder = new TextEncoder();
-      const uint8Array = textEncoder.encode(jsonString);
+      //const textEncoder = new TextEncoder();
+      const uint8Array = encoder.encode(jsonString);
       ///const dataEncoded = encoder.encode(nama, umur, sex, penyakit);
       //const jsonData = JSON.stringify(dataEncoded);
       interest.appParameters = uint8Array;
