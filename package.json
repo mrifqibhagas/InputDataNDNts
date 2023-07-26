@@ -5,7 +5,8 @@
         "@ndn/autoconfig": "https://ndnts-nightly.ndn.today/autoconfig.tgz",
         "@ndn/endpoint": "https://ndnts-nightly.ndn.today/endpoint.tgz",
         "@ndn/packet": "https://ndnts-nightly.ndn.today/packet.tgz",
-        "@ndn/util": "https://ndnts-nightly.ndn.today/util.tgz"
+        "@ndn/util": "https://ndnts-nightly.ndn.today/util.tgz",
+        "@ndn/ws-transport": "https://ndnts-nightly.ndn.today/ws-transport.tgz"       
     },
     "devDependencies": {
         "webpack": "5.88.2",
