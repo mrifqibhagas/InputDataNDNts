@@ -14,7 +14,7 @@ async function ping(evt) {
     const nama = document.querySelector("#nama").value;
     const umur = document.querySelector("#umur").value;
     const sex = document.querySelector("#jeniskelamin").value;
-    const penyakit = document.querySelector("#jenisKanker").value;
+    const penyakit = document.querySelector("#kategorikanker").value;
     const alamat = document.querySelector("#alamat").value;
     const hp = document.querySelector("#nomorhp").value;
     const ktp = document.querySelector("#ktp").value;
