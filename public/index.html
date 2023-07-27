@@ -1,180 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>namapasien</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.cdnfonts.com/css/nunito" rel="stylesheet">
-    <style>
-        * {
-          box-sizing: border-box;
-        }
-        
-        input[type=text], select, textarea {
-          width: 100%;
-          padding: 12px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          resize: vertical;
-        }
-        
-        label {
-          padding: 12px 12px 12px 0;
-          display: inline-block;
-        }
-        
-        input[type=submit] {
-          background-color: #04AA6D;
-          color: white;
-          padding: 12px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          float: right;
-        }
-        
-        input[type=submit]:hover {
-          background-color: #45a049;
-        }
-        
-        .container {
-          border-radius: 5px;
-          background-color: #f2f2f2;
-          padding: 20px;
-        }
-        
-        .col-25 {
-          float: left;
-          width: 25%;
-          margin-top: 6px;
-        }
-        
-        .col-75 {
-          float: left;
-          width: 75%;
-          margin-top: 6px;
-        }
-        
-        /* Clear floats after the columns */
-        .row::after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-        
-        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-          .col-25, .col-75, input[type=submit] {
-            width: 100%;
-            margin-top: 0;
-          }
-        }
-        </style>
-</head>
-<body>
-    <section class="w3-center" style = "
-    Left
-    :
-    Linear Gradient
-    rgba(3, 38, 91, 1)
-    rgba(41, 118, 235, 0);
-    /* Rectangle 43 */
-    
-    
-    position: relative;
-    top: 0px;
-    
-    background: linear-gradient(180deg, #03265B 0%, rgba(41, 118, 235, 0) 100%);">
-        <div class="w3-container" style="padding-top: 50px;">
-            <form id="inputinkeluhan">
-                <div class="w3-card w3-center" style="padding: 20px; background-color: lightsteelblue; border-radius: 20px;">
-                    <div class="row">
-                        <div class="col-25">
-                          <label for="nama">nama</label>
-                        </div>
-                        <div class="col-75">
-                          <input type="text" id="nama" name="nama" placeholder="nama">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                          <label for="alamat">alamat</label>
-                        </div>
-                        <div class="col-75">
-                          <input type="text" id="alamat" name="alamat" placeholder="alamat">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                          <label for="nomorhp">nomor hp</label>
-                        </div>
-                        <div class="col-75">
-                          <input type="text" id="nomorhp" name="nomorhp" placeholder="nomor hp">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                          <label for="ktp">nomor KTP</label>
-                        </div>
-                        <div class="col-75">
-                          <input type="text" id="ktp" name="ktp" placeholder="Nomor KTP">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                          <label for="umur">Umur</label>
-                        </div>
-                        <div class="col-75">
-                          <input type="text" id="umur" name="umur" placeholder="umur">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                          <label for="golonganDarah">Gol. Darah</label>
-                        </div>
-                        <div class="col-75">
-                          <select id="golonganDarah" name="golonganDarah">
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="AB">AB</option>
-                            <option value="0">0</option>
-                          </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                          <label for="jeniskelamin">Country</label>
-                        </div>
-                        <div class="col-75">
-                          <select id="jeniskelamin" name="jeniskelamin">
-                            <option value="lakilaki">Laki-laki</option>
-                            <option value="perempuan">Perempuan</option>
-                          </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                          <label for="kategorikanker">jenis kanker kulit</label>
-                        </div>
-                        <div class="col-75">
-                          <select id="kategorikanker" name="kategorikanker">
-                            <option value="Melanoma">Melanoma</option>
-                            <option value="NonMelanoma">Non Melanoma</option>
-                          </select>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <input type="submit" id='submitbutton' class="w3-button" style=" width: 100%; border-radius: 20px; color: white;background-color: #0C4293;" value="KIRIM" disabled>
-                    </div>
-                </div>
-            </form>
-        </div>
+<html>
 
-    </section>
+<head>
+    <meta charset="utf-8">
+    <title>Input Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form id="app_form">
+        <fieldset>
+            <legend>Input Data</legend>
+
+            <label for="app_nama">Nama</label>
+            <input id="app_nama" type="text">
+
+            <label for="app_umur">Umur</label>
+            <input id="app_umur" type="number">
+
+            <label for="app_alamat">Alamat</label>
+            <input id="app_alamat" type="text">
+
+            <label for="app_hp">Nomor Hp</label>
+            <input id="app_hp" type="number">
+
+            <label for="app_ktp">No KTP</label>
+            <input id="app_ktp" type="number">
+
+            <label for="app_goldar">Golongan Darah</label>
+            <select id="app_goldar">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="O">O</option>
+                <option value="AB">AB</option>
+            </select>
+
+            <label for="app_sex">Jenis Kelamin</label>
+            <select id="app_sex">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="app_penyakit">Penyakit</label>
+            <select id="app_penyakit">
+              <option value="MEL">MEL</option>
+              <option value="NONMEL">NONMEL</NON-MEL></option>
+          </select>
+
+            <input id="app_button" type="submit" value="submit" disabled>
+        </fieldset>
+    </form>
     <pre id="app_log"></pre>
     <script src="bundle.js"></script>
 </body>
+
 </html>
