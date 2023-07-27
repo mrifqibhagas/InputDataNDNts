@@ -1,4 +1,3 @@
-//import { connectToNetwork, connectToRouter } from "@ndn/autoconfig";
 import { Endpoint } from "@ndn/endpoint";
 import { AltUri, Interest, Name } from "@ndn/packet";
 import { WsTransport } from "@ndn/ws-transport";
@@ -6,20 +5,20 @@ import { WsTransport } from "@ndn/ws-transport";
 async function ping(evt) {
   evt.preventDefault();
   // Disable the submit button during function execution.
-  const $button = document.querySelector("#app_button");
+  const $button = document.querySelector("#submitbutton");
   $button.disabled = true;
 
   try {
     // Construct the name prefix <user-input>+/ping
     const prefix = new Name("/data/inputdata");
-    const nama = document.querySelector("#app_nama").value;
-    const umur = document.querySelector("#app_umur").value;
-    const sex = document.querySelector("#app_sex").value;
-    const penyakit = document.querySelector("#app_penyakit").value;
-    const alamat = document.querySelector("#app_alamat").value;
-    const hp = document.querySelector("#app_hp").value;
-    const ktp = document.querySelector("#app_ktp").value;
-    const goldar = document.querySelector("#app_goldar").value;
+    const nama = document.querySelector("#nama").value;
+    const umur = document.querySelector("#umur").value;
+    const sex = document.querySelector("#jeniskelamin").value;
+    const penyakit = document.querySelector("#jenisKanker").value;
+    const alamat = document.querySelector("#alamat").value;
+    const hp = document.querySelector("#nomorhp").value;
+    const ktp = document.querySelector("#ktp").value;
+    const goldar = document.querySelector("#golonganDarah").value;
     //const $log = document.querySelector("#app_log");
     //$log.textContent = `Check Data \n${AltUri.ofName(prefix)}\n`;
 
