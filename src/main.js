@@ -1,4 +1,4 @@
-import { Endpoint } from "@ndn/endpoint";
+import { Endpoint } from "@ndn/endpoint"; 
 import { AltUri, Interest, Name } from "@ndn/packet";
 import { WsTransport } from "@ndn/ws-transport";
 
@@ -10,7 +10,7 @@ async function ping(evt) {
 
   try {
     // Construct the name prefix <user-input>+/ping
-    const prefix = new Name("/data/inputdata");
+    const prefix = new Name("/data/inputdata");//Prefix Declared
     const nama = document.querySelector("#nama").value;
     const umur = document.querySelector("#umur").value;
     const sex = document.querySelector("#jeniskelamin").value;
@@ -24,11 +24,9 @@ async function ping(evt) {
 
     const endpoint = new Endpoint();
     const encoder = new TextEncoder();
-    // Generate a random number as initial sequence number.
-    ///let seqNum = Math.trunc(Math.random() * 1e8);
     for (let i = 0; i < 1; ++i) {
-      //++seqNum;
-      // Construct an Interest with prefix + seqNum.
+
+      // Construct an Interest with prefix
       const interest = new Interest();
       interest.name = prefix;
       interest.mustBeFresh = true; 
@@ -45,10 +43,7 @@ async function ping(evt) {
       };
       const jsonString = JSON.stringify(dataObj);
       // Use TextEncoder to encode the JSON string into Uint8Array
-      //const textEncoder = new TextEncoder();
       const uint8Array = encoder.encode(jsonString);
-      ///const dataEncoded = encoder.encode(nama, umur, sex, penyakit);
-      //const jsonData = JSON.stringify(dataEncoded);
       interest.appParameters = uint8Array;
       //$log.textContent += `\n${encoder.encode(app)}\n`;
       const t0 = Date.now();
@@ -58,9 +53,7 @@ async function ping(evt) {
         const data = await endpoint.consume(interest);
         const rtt = Date.now() - t0;
         const dataContent = data.content;
-        //console.log(dataContent);
-        //$log.textContent += `${AltUri.ofName(data.name)} rtt= ${rtt}ms content= ${String.fromCharCode(...dataContent)}\n`;
-        //console.log(`${rtt} ms`);
+        
       } catch(err) {
         // Report Data retrieval error.
         //$log.textContent += `\n${AltUri.ofName(interest.name)} ${err}`;
